@@ -1,0 +1,16 @@
+#!/bin/ba
+docker run -it --rm --user $(id -u):$(id -g) --shm-size 4G --gpus all -v .:/home/dd/yolov7/yolov7 -w /home/dd/yolov7/yolov7 tyson/yolov7:latest \
+	python train.py \
+	--workers 32 \
+	--device 0 \
+	--batch-size 32 \
+	--data data/coco.yaml \
+	--img 640 640 \
+	--cfg cfg/training/yolov7.yaml \
+	--weights yolov7_training.pt \
+	--name NewData__0226_lr001_2500e\
+	--hyp data/hyp.scratch.custom.yaml \
+	--epochs 2500\
+	--multi-scale\
+	--rect\
+	--nosave

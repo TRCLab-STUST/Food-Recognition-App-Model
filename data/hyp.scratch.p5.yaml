@@ -1,0 +1,31 @@
+lr0: 0.00558 # 初始學習率（對於 SGD 為 1E-2，對於 Adam 為 1E-3）
+lrf: 0.1 # 最終 OneCycleLR 學習率（lr0 * lrf）
+momentum: 0.937 # SGD 動量/Adam beta1
+weight_decay: 0.0005 # 優化器權重衰減 5e-4
+warmup_epochs: 10.0 # 預熱時期（可以是小數）
+warmup_momentum: 0.8 # 預熱初始動量
+warmup_bias_lr: 0.1 # 預熱初始偏置學習率
+box: 0.08 # 目標框損失增益
+cls: 0.39 # 分類損失增益
+cls_pw: 1.0 # 分類 BCELoss 正權重
+obj: 0.7 # 目標損失增益（與像素一起縮放）
+obj_pw: 1.0 # 目標 BCELoss 正權重
+iou_t: 0.55 # IoU 訓練閾值
+anchor_t: 3.2 # 錨點倍數閾值
+#anchors: 3 # 每個輸出層的錨點數量（0 為忽略）
+fl_gamma: 1.5 # 焦點損失 gamma（EfficientDet 默認 gamma=1.5）
+hsv_h: 0.016 # 圖像 HSV-Hue 增強
+hsv_s: 0.5 # 圖像 HSV-Saturation 增強
+hsv_v: 0.5 # 圖像 HSV-Value 增強
+degrees: 0.3 # 圖像旋轉（+/- 度）
+translate: 0.5 # 圖像平移（+/- 比例）
+scale: 0.4 # 圖像縮放（+/- 增益）
+shear: 0.0 # 圖像剪切（+/- 度）
+perspective: 0.0 # 圖像透視（+/- 比例），範圍 0-0.001
+flipud: 0.4 # 圖像上下翻轉
+fliplr: 0.4 # 圖像左右翻轉
+mosaic: 0.0 # 圖像馬賽克
+mixup: 0.0 # 圖像混合
+copy_paste: 0.0 # 圖像複製粘貼
+paste_in: 0.0 # 圖像粘貼，設置 0 以加快訓練速度
+loss_ota: 0 # 使用 ComputeLossOTA，設置 0 以加快訓練速度

@@ -1,0 +1,14 @@
+__pycache__/
+data/dataests/
+/runs
+
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.tiff
+*.gif
+*.JPG
+*.webp
+
+*.pt

@@ -1,0 +1,15 @@
+# download command/URL (optional)
+#download: bash ./scripts/get_coco.sh
+
+# train and val data as 1) directory: path/images/, 2) file: path/images.txt, or 3) list: [path1/images/, path2/images/]
+train: /home/dd/yolov7/yolov7/data/dataests/train
+val:  /home/dd/yolov7/yolov7/data/dataests/valid
+#test: ./data/dataests/test_gitgit
+
+# number of classes
+nc: 26
+
+# class names
+names: ['rice_dumpling', 'xiaolongbao', 'wheel_pie', 'beef_noodles', 'beef_soup', 'bitter_melon_with_salted_eggs', 'brown_sugar_cake', 'bubble_tea', 'chicken_mushroom_soup', 'deep-fried_chicken_cutlets', 
+               'fried_instant_noodles','fried_rice_noodles','Gongwan soup','grilled_corn','grilled_taiwanese_sausage','hot_sour_soup','kung-pao_chicken','milkfish_belly_congee','night_market_steak','oyster_omelet','pigs_blood_soup',
+               'salty_fried_chicken_nuggets','scrambled_eggs_with_tomatoes','spicy_duck_blood','stir-fried_loofah_with_clam','turkey_rice',]
